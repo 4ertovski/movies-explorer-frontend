@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-app{
+  background-color: white;
+  min-height: 10vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+.main-app__content{
+  font-family: 'Inter', Arial, sans-serif;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px; /*TODO uncomment?*/
+  min-width: 320px;
+}
