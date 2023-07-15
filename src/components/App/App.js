@@ -198,23 +198,24 @@ function App() {
                             </>
                         )}/>
                         <Route path='/movies' element={
-                            <Movies movies={cards}/>
+                            <ProtectedRoute
+                                element={Movies}
+                                isLoggedIn={isLoggedIn}
+                                onCardDelete={handleCardDelete}
+                                handleLikeClick={handleCardLike}
+                                savedMovies={savedMovies}
+                                movies={cards}/>
                         }/>
-                        <Route path='/saved-movies' element={<SavedMovies/>}/>
+                        <Route path='/saved-movies' element={
+                            <ProtectedRoute
+                                savedMovies={savedMovies}
+                                isLoggedIn={isLoggedIn}
+                                onCardDelete={handleCardDelete}
+                                element={SavedMovies}
+                            />
+                            }/>
                        {/* TODO ProtectedRoutes*/}
-                       {/* <ProtectedRoute
-                            path="/movies"
-                            savedMovies={savedMovies}
-                            loggedIn={isLoggedIn}
-                            onCardDelete={handleCardDelete}
-                            element={Movies}
-                            handleLikeClick={handleCardLike}/>
-                        <ProtectedRoute
-                            path="/saved-movies"
-                            savedMovies={savedMovies}
-                            loggedIn={isLoggedIn}
-                            onCardDelete={handleCardDelete}
-                            element={SavedMovies}/>
+                       {/*
                         <ProtectedRoute
                             path="/profile"
                             signOut={handleSignOut}
