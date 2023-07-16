@@ -220,10 +220,10 @@ function App() {
                             path="/profile"
                             signOut={handleSignOut}
                             onUpdateUser={handleUpdateUser}
-                            loggedIn={isLoggedIn}
+                            isLoggedIn={isLoggedIn}
                             element={Profile}
                             isLoading={isLoading}/>*/}
-                        <Route path='/*' element={<NotFound/>}/>
+                        <Route path='/*' element={<NotFound isLoggedIn={isLoggedIn}/>}/>
                     </Routes>
                     <InfoTooltip isSuccess={isSuccess} onClose={closeUnsuccessPopup} />
                     <InfoTooltip isSuccess={!isUpdate} isUpdate={isUpdate} onClose={closeUnsuccessPopup} />
