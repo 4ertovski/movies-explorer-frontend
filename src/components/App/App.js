@@ -199,7 +199,6 @@ function App() {
                             isLoggedIn={isLoggedIn}
                             isLoading={isLoading}
                             >
-                               {/* <Profile/>*/}
                             </ProtectedRoute>
                         )}/>
                         <Route path='/movies' element={
@@ -219,7 +218,7 @@ function App() {
                                 element={SavedMovies}
                             />
                             }/>
-                        <Route path='*' element={<NotFound />}/>
+                        <Route path='*' element={<NotFound/>}/>
                     </Routes>
                     <InfoTooltip isSuccess={isSuccess} onClose={closeUnsuccessPopup} />
                     <InfoTooltip isSuccess={!isUpdate} isUpdate={isUpdate} onClose={closeUnsuccessPopup} />
