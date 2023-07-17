@@ -192,10 +192,16 @@ function App() {
                             <Route path='/' element={<Navigate to="/"/>}/>
                         )}
                         <Route path='/profile' element={(
-                            <>
-                                <Header/>
+                            <ProtectedRoute
+                            element={Profile}
+                            signOut={handleSignOut}
+                            onUpdateUser={handleUpdateUser}
+                            isLoggedIn={isLoggedIn}
+                            isLoading={isLoading}
+                            >
+                               {/* <Header/>*/}
                                 <Profile/>
-                            </>
+                            </ProtectedRoute>
                         )}/>
                         <Route path='/movies' element={
                             <ProtectedRoute
