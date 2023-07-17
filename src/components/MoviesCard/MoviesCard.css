@@ -5,7 +5,7 @@
     background-color: #F9F9F9;
     max-height: 281px;
     overflow: hidden;
-
+    flex-direction: row-reverse;
 }
 
 .card__container{
@@ -13,6 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 22px 0 0 22px;
+    flex-grow:1;
 }
 
 .card__info{
@@ -23,8 +24,9 @@
     font-size: 11px;
     line-height: 13px;
     display: flex;
-    align-items: center;
     color: #a0a0a0;
+    align-items: flex-start;
+    flex-direction: column
 }
 
 .card__text{
