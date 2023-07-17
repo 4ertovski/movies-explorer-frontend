@@ -219,7 +219,7 @@ function App() {
                                 element={SavedMovies}
                             />
                             }/>
-                        <Route path='*' element={<NotFound isLoggedIn={isLoggedIn}/>}/>
+                        <Route path='/*' element={<NotFound />}/>
                     </Routes>
                     <InfoTooltip isSuccess={isSuccess} onClose={closeUnsuccessPopup} />
                     <InfoTooltip isSuccess={!isUpdate} isUpdate={isUpdate} onClose={closeUnsuccessPopup} />
