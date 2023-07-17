@@ -42,8 +42,6 @@ const Movies = ({isLoggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
 
     //submit
     function onSearchMovies(query) {
-        console.log(query);
-
         localStorage.setItem('movieSearch', query);
         localStorage.setItem('shortMovies', isShortMovies);
 

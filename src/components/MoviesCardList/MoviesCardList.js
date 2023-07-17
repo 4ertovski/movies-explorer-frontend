@@ -57,7 +57,7 @@ const MoviesCardList = ({cards, isSavedFilms, isLoading, isReqErr, isNotFound, h
             {isReqErr && !isLoading && (
                 <SearchError
                     errorText={
-                        'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз'
+                        'Во время запроса произошла ошибка.'
                     }
                 />
             )}
