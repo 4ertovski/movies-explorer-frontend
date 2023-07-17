@@ -92,8 +92,8 @@ export const postCard = (data) => {
             trailerLink: data.trailerLink,
             thumbnail: 'https://api.nomoreparties.co' + data.image.formats.thumbnail.url,
             movieId: data.id,
-            nameRU: data.nameRU,
-            nameEN: data.nameEN,
+            nameRU: data.nameRU || data.nameEN,
+            nameEN: data.nameEN || data.nameRU,
         }),
     }).then((res) => checkResponse(res));
 };
