@@ -184,12 +184,12 @@ function App() {
                         {!isLoggedIn ? (
                             <Route path='/signin' element={<Login onAuthorize={handleAuthorize} isLoading={isLoading}/>}/>
                         ) : (
-                            <Navigate to="/" />
+                            <Route path='/' element={<Navigate to="/"/>}/>
                         )}
                         {!isLoggedIn ? (
                             <Route path='/signup' element={<Register onRegister={handleRegister} isLoading={isLoading}/>}/>
                         ) : (
-                            <Navigate to="/" />
+                            <Route path='/' element={<Navigate to="/"/>}/>
                         )}
                         <Route path='/profile' element={(
                             <>
