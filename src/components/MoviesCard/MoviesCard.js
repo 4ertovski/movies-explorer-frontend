@@ -28,8 +28,8 @@ const MoviesCard = ({card, isSavedFilms, handleLikeClick, onCardDelete, saved, s
             </a>
             <div className='card__container'>
                 <div className='card__info'>
-                    <h2 className='card__text'>{card.title}</h2>
-                    <span className='card__length'>{durationConverter(card.length)}</span>
+                    <h2 className='card__text'>{card.nameRU}</h2>
+                    <span className='card__length'>{durationConverter(card.duration)}</span>
                 </div>
                 {isSavedFilms ? (
                     <button type="button" className='card__remove-button' onClick={onDelete}></button>
@@ -45,3 +45,4 @@ const MoviesCard = ({card, isSavedFilms, handleLikeClick, onCardDelete, saved, s
 export default MoviesCard
 
 // DONE
+// TODO поменять местами картинку и длительность, выровнять расстояние между названием фильма и длительностью

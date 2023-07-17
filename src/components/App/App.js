@@ -199,8 +199,7 @@ function App() {
                             isLoggedIn={isLoggedIn}
                             isLoading={isLoading}
                             >
-                               {/* <Header/>*/}
-                                <Profile/>
+                               {/* <Profile/>*/}
                             </ProtectedRoute>
                         )}/>
                         <Route path='/movies' element={
@@ -220,15 +219,6 @@ function App() {
                                 element={SavedMovies}
                             />
                             }/>
-                       {/* TODO ProtectedRoutes*/}
-                       {/*
-                        <ProtectedRoute
-                            path="/profile"
-                            signOut={handleSignOut}
-                            onUpdateUser={handleUpdateUser}
-                            isLoggedIn={isLoggedIn}
-                            element={Profile}
-                            isLoading={isLoading}/>*/}
                         <Route path='/*' element={<NotFound isLoggedIn={isLoggedIn}/>}/>
                     </Routes>
                     <InfoTooltip isSuccess={isSuccess} onClose={closeUnsuccessPopup} />

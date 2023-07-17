@@ -75,7 +75,7 @@ export const getCards = () => {
 
 // метод добавления новой карточки на сервер
 export const postCard = (data) => {
-    // console.log(data);
+    console.log(data);
     return fetch(`${BASE_URL}/movies`, {
         method: 'POST',
         headers: {

@@ -1,6 +1,7 @@
 .card{
     display: flex;
     justify-content: space-between;
+    text-align: left;
     background-color: #F9F9F9;
     max-height: 281px;
     overflow: hidden;
@@ -15,15 +16,24 @@
 }
 
 .card__info{
-
+    margin-top: 10px;
+    padding-right: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    color: #a0a0a0;
 }
 
 .card__text{
+    color: #000;
+    font-size: 18px;
+    font-family: Inter;
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-
+    line-height: normal;
 }
 
 .card__length{
