@@ -30,7 +30,7 @@ const Header = ({isLandingPage = false, isLoggedIn}) => {
                         <Link to={'/signup'} className={'header__button'}>
                             Регистрация
                         </Link>
-                        <Link to={'/signin'} className={'header__button header__button-dark'}> {/* TODO тут другой класс*/}
+                        <Link to={'/signin'} className={'header__button header__button-dark'}>
                             Войти
                         </Link>
                     </div>
@@ -50,10 +50,10 @@ const Header = ({isLandingPage = false, isLoggedIn}) => {
                     </div>
                     <div className={'header__button-container'}>
                         <Link to={'/profile'} className='header__account-button'>
-                            <img src={account} alt="Аккаунт"/> {/*TODO change alt*/}
+                            <img src={account} alt="Аккаунт"/>
                         </Link>
                         <button className={'header__menu-button'} onClick={handleMenuOpen}>
-                            <img src={menu} alt='Меню' /> {/* TODO change alt */}
+                            <img src={menu} alt='Меню' />
                         </button>
                     </div>
                     {isMenuClicked ? <Navigation handleMenuClose={handleMenuClose}/> : ''}
@@ -69,3 +69,5 @@ const Header = ({isLandingPage = false, isLoggedIn}) => {
 }
 
 export default Header
+
+// DONE

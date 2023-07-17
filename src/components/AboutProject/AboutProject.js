@@ -1,4 +1,3 @@
-import React from 'react';
 import './AboutProject.css'
 
 const AboutProject = () =>
@@ -34,4 +33,6 @@ const AboutProject = () =>
     )
 }
 
-export default AboutProject
+export default AboutProject;
+
+// NOTHING CHANGES SINCE LEVEL-2

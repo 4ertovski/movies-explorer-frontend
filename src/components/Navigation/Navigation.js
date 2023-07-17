@@ -33,7 +33,7 @@ const Navigation = ({ handleMenuClose }) => {
                 </NavLink>
             </nav>
             <Link to={'/profile'} onClick={handleMenuClose} className='navigation__account-button'>
-                <img src={account} alt='Аккаунт'/> {/* TODO change alt */}
+                <img src={account} alt='Аккаунт'/>
             </Link>
             </div>
         </div>
@@ -41,3 +41,5 @@ const Navigation = ({ handleMenuClose }) => {
 }
 
 export default Navigation
+
+// NOTHING CHANGES SINCE LEVEL-2

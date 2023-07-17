@@ -2,7 +2,6 @@ import React from 'react';
 import profilePic from '../../images/myphoto.jpg'
 import './AboutMe.css'
 
-//TODO
 const AboutMe = () => {
     return(
         <section className="about-me">
@@ -29,4 +28,6 @@ const AboutMe = () => {
     )
 }
 
-export default AboutMe
+export default AboutMe;
+
+// NOTHING CHANGES SINCE LEVEL-2

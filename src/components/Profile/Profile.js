@@ -4,7 +4,7 @@ import './Profile.css'
 import Header from '../Header/Header';
 import useForm from '../hooks/useForm';
 import { EMAIL_REGEX, USERNAME_REGEX } from '../../utils/constants';
-const Profile = ({ signOut, onUpdateUser, loggedIn, isLoading }) =>{
+const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
     const currentUser = useContext(CurrentUserContext);
 
     const { enteredValues, errors, handleChange, isFormValid, resetForm } = useForm();
@@ -35,7 +35,7 @@ const Profile = ({ signOut, onUpdateUser, loggedIn, isLoading }) =>{
     }, [enteredValues]);
     return(
         <>
-            <Header loggedIn={loggedIn} />
+            <Header loggedIn={isLoggedIn} />
         <section className='profile'>
             <h3 className='profile__title'>Привет, {currentUser.name}!</h3>
             <form className='profile__form' onSubmit={handleSubmit} noValidate>
@@ -71,7 +71,7 @@ const Profile = ({ signOut, onUpdateUser, loggedIn, isLoading }) =>{
                     <span className="profile__input-error">{errors.email}</span>
                 </label>
                 <button type='submit'
-                        disabled={!isFormValid ? true : false}
+                        disabled={!isFormValid}
                         className={!isFormValid || isLoading || isLastValues
                             ? 'profile__button-submit'
                             :'profile__button-submit profile__button-submit_inactive' }
@@ -86,3 +86,5 @@ const Profile = ({ signOut, onUpdateUser, loggedIn, isLoading }) =>{
 }
 
 export default Profile
+
+// CHECK CSS

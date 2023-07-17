@@ -1,4 +1,3 @@
-import React from 'react';
 import './Footer.css'
 
 const Footer = () =>{
@@ -6,7 +5,7 @@ const Footer = () =>{
         <footer className="footer">
             <h3 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h3>
             <div className="footer__container">
-                <p className="footer__author">&copy; 2023 Олеся Савченко</p>
+                <p className="footer__author">&copy; {new Date().getFullYear()} Олеся Савченко</p>
                 <a
                     href="https://practicum.yandex.ru"
                     className="footer__link"
@@ -27,3 +26,5 @@ const Footer = () =>{
 }
 
 export default Footer
+
+// DONE WITH MINOR CHANGES SINCE LEVEL-2

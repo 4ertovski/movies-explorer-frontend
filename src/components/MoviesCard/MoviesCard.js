@@ -38,13 +38,10 @@ const MoviesCard = ({card, isSavedFilms, handleLikeClick, onCardDelete, saved, s
                 )
                     }
             </div>
-          {/*  <img
-                className='card__image'
-                alt={card.title}
-                src={card.image}
-            />*/}
         </li>
     )
 }
 
 export default MoviesCard
+
+// DONE

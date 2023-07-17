@@ -11,7 +11,6 @@ import NotFound from "../NotFound/NotFound";
 import Movies from "../Movies/Movies";
 import SavedMovies from "../SavedMovies/SavedMovies";
 import React, {useEffect, useState} from "react";
-
 import CurrentUserContext from '../../contexts/CurrentUserContext';
 import * as api from '../../utils/MainApi'
 import InfoTooltip from "../InfoTooltip/InfoTooltip";
@@ -29,6 +28,7 @@ function App() {
     const path = location.pathname;
 
     //AUTHORIZE IF TOKEN PRESENT
+
     useEffect(()=>{
         const jwt = localStorage.getItem('jwt');
 
@@ -234,3 +234,5 @@ function App() {
 }
 
 export default App;
+
+// TODO ProtectedRoute Profile

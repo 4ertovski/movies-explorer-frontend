@@ -1,7 +1,8 @@
 import {Link} from "react-router-dom";
-import './NotFound.css'
+import './NotFound.css';
 
 const NotFound = () => {
+
     return(
         <section className='not-found'>
             <h2 className='not-found__title'>404</h2>
@@ -14,3 +15,5 @@ const NotFound = () => {
 }
 
 export default NotFound
+
+// NOTHING CHANGES SINCE LEVEL-2

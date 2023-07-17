@@ -71,3 +71,5 @@ const Register = ({ onRegister, isLoading }) => {
 }
 
 export default Register
+
+// DONE

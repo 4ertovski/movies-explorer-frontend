@@ -11,4 +11,6 @@ const Preloader = () => {
     )
 };
 
-export default Preloader
+export default Preloader;
+
+// NOTHING CHANGES SINCE LEVEL-2

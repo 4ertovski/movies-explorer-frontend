@@ -23,4 +23,6 @@ const Techs = () => {
     )
 }
 
-export default Techs
+export default Techs;
+
+// NOTHING CHANGES SINCE LEVEL-2

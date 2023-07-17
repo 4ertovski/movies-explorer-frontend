@@ -8,19 +8,8 @@ import { filterMovies, filterDuration } from '../../utils/utils';
 
 import * as movies from '../../utils/MoviesApi';
 
-/*import movieImage from '../../images/card-saved.png';
 
-const movies123 = [
-  { _id: 1, image: movieImage, title: '33 слова о дизайне', length: '1ч 42м', saved: true },
-  { _id: 2, image: movieImage, title: 'Киноальманах «100 лет дизайна»', length: '1ч 42м', saved: true },
-  { _id: 3, image: movieImage, title: 'В погоне за Бенкси', length: '1ч 42м', saved: false },
-  { _id: 4, image: movieImage, title: 'Баския: Взрыв реальности', length: '1ч 42м', saved: false },
-  { _id: 5, image: movieImage, title: 'Бег это свобода', length: '1ч 42м', saved: true },
-  { _id: 6, image: movieImage, title: 'Книготорговцы', length: '1ч 42м', saved: false },
-  { _id: 7, image: movieImage, title: 'Когда я думаю о Германии ночью', length: '1ч 42м', saved: false },
-];*/
-
-const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
+const Movies = ({isLoggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
     const [isLoading, setIsLoading] = useState(false); //загрузка прелоадер
     const [initialMovies, setInitialMovies] = useState([]); //отфильтрованные по запросу
     const [filteredMovies, setFilteredMovies] = useState([]); //отфильтрованные по запросу и чекбоксу
@@ -42,14 +31,11 @@ const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
         if (!isShortMovies) {
             if (filterDuration(initialMovies).length === 0) {
                 setFilteredMovies(filterDuration(initialMovies));
-                // setIsNotFound(true);
             } else {
                 setFilteredMovies(filterDuration(initialMovies));
-                // setIsNotFound(false);
             }
         } else {
             setFilteredMovies(initialMovies);
-            // setIsNotFound(initialMovies.length === 0 ? true : false);
         }
         localStorage.setItem('shortMovies', !isShortMovies);
     }
@@ -63,17 +49,14 @@ const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
 
         if (localStorage.getItem('allMovies')) {
             const movies = JSON.parse(localStorage.getItem('allMovies'));
-            console.log('lo');
             handleFilterMovies(movies, query, isShortMovies);
         } else {
-            console.log('nolo');
             setIsLoading(true);
             movies
                 .getCards()
                 .then((cardsData) => {
                     handleFilterMovies(cardsData, query, isShortMovies);
                     setIsReqErr(false);
-                    // setAllMovies(cardsData);
                 })
                 .catch((err) => {
                     setIsReqErr(true);
@@ -103,7 +86,7 @@ const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
                 setFilteredMovies(movies);
             }
         } else {
-            // setIsNotFound(true);
+            setIsNotFound(true);
         }
     }, []);
 
@@ -120,7 +103,7 @@ const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
     }, [filteredMovies]);
     return(
         <section className='movies'>
-            <Header loggedIn={loggedIn} />
+            <Header loggedIn={isLoggedIn} />
             <SearchForm
                 onSearchMovies={onSearchMovies}
                 onFilter={handleShortMovies}
@@ -140,3 +123,5 @@ const Movies = ({loggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
 }
 
 export default Movies
+
+// DONE

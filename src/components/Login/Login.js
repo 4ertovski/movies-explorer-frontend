@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Form from "../Form/Form";
 import '../Form/Form.css';
 import useForm from '../hooks/useForm';
 import { EMAIL_REGEX } from '../../utils/constants';
-
-const Login =  ({ onAuthorize, isLoading }) => {
+import { useNavigate } from 'react-router-dom';
+const Login =  ({ onAuthorize, isLoading, isLoggedIn }) => {
     const { enteredValues, errors, handleChange, isFormValid } = useForm();
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -14,6 +15,12 @@ const Login =  ({ onAuthorize, isLoading }) => {
             password: enteredValues.password,
         });
     }
+
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate('/movies');
+        }
+    }, [isLoggedIn]);
 
     return(
         <Form
@@ -32,7 +39,10 @@ const Login =  ({ onAuthorize, isLoading }) => {
                 name='email'
                 className='form__input'
                 id='email-input'
-                type='text'
+                type='email'
+                placeholder="Введите почту"
+                minLength="2"
+                maxLength="40"
                 required={true}
                 onChange={handleChange}
                 pattern={EMAIL_REGEX}
@@ -47,6 +57,9 @@ const Login =  ({ onAuthorize, isLoading }) => {
                 className='form__input'
                 id='password-input'
                 type='password'
+                placeholder="Введите пароль"
+                minLength="1"
+                required
                 onChange={handleChange}
                 value={enteredValues.password || ''}
             />
@@ -57,3 +70,5 @@ const Login =  ({ onAuthorize, isLoading }) => {
 }
 
 export default Login
+
+// DONE

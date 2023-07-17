@@ -6,11 +6,6 @@ import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { filterMovies, filterDuration } from '../../utils/utils';
 
-
-//TODO del
-// import movieImage from '../../images/card-saved.png';
-
-
 const SavedMovies = ({ loggedIn, savedMovies, onCardDelete }) => {
     const [filteredMovies, setFilteredMovies] = useState(savedMovies); //отфильтрованные по запросу и чекбоксу
     const [isShortMovies, setIsShortMovies] = useState(false); //включен ли чекбокс короткометражек

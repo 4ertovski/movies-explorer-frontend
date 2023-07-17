@@ -10,3 +10,5 @@ const FilterCheckbox = ({ onFilter, isShortMovies }) =>{
 }
 
 export default FilterCheckbox;
+
+// DONE

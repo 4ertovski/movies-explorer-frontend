@@ -5,9 +5,9 @@ const useForm = () => {
     const [errors, setErrors] = useState({});
     const [isFormValid, setIsFormValid] = useState(false);
 
-    const handleChange = (event) => {
-        const name = event.target.name;
-        const value = event.target.value;
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
 
         setEnteredValues({
             ...enteredValues,
@@ -16,10 +16,10 @@ const useForm = () => {
 
         setErrors({
             ...errors,
-            [name]: event.target.validationMessage,
+            [name]: e.target.validationMessage,
         });
 
-        setIsFormValid(event.target.closest('#form').checkValidity());
+        setIsFormValid(e.target.closest('form').checkValidity());
     };
 
     const resetForm = useCallback(
@@ -36,8 +36,10 @@ const useForm = () => {
         errors,
         handleChange,
         isFormValid,
-        resetForm,
+        resetForm
     };
 };
 
 export default useForm;
+
+// DONE

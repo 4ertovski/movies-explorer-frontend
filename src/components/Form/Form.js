@@ -2,7 +2,16 @@ import "./Form.css"
 import {Link} from "react-router-dom";
 import logo from '../../images/logo.svg'
 
-const Form = ({children, title, buttonText, question, linkText, link, onSubmit, isDisabled, isLoading,}) => {
+const Form = ({
+                  children,
+                  title,
+                  buttonText,
+                  question,
+                  linkText,
+                  link,
+                  onSubmit,
+                  isDisabled,
+                  isLoading}) => {
     return(
         <div className={'form__container'}>
             <Link to={'/'} className='form__logo'>
@@ -11,7 +20,9 @@ const Form = ({children, title, buttonText, question, linkText, link, onSubmit, 
             <h3 className='form__title'>{title}</h3>
             <form className='form' onSubmit={onSubmit} noValidate>
                 {children}
-                <button type='submit' className={
+                <button type='submit'
+                        disabled={!!isDisabled}
+                        className={
                     isDisabled || isLoading
                     ? 'form__button-submit_disable'
                     : 'form__button-submit'}>
@@ -29,3 +40,6 @@ const Form = ({children, title, buttonText, question, linkText, link, onSubmit, 
 }
 
 export default Form
+
+// JS IS DONE
+// TODO CSS: FORM_BUTTON DISABLE&LOADING
