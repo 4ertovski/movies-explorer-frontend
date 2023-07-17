@@ -103,7 +103,7 @@ const Movies = ({isLoggedIn, handleLikeClick, savedMovies, onCardDelete }) => {
     }, [filteredMovies]);
     return(
         <section className='movies'>
-            <Header loggedIn={isLoggedIn} />
+            <Header isLoggedIn={isLoggedIn} />
             <SearchForm
                 onSearchMovies={onSearchMovies}
                 onFilter={handleShortMovies}

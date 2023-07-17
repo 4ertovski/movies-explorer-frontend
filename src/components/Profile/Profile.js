@@ -35,7 +35,7 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
     }, [enteredValues]);
     return(
         <>
-            <Header loggedIn={isLoggedIn} />
+            <Header isLoggedIn={isLoggedIn} />
         <section className='profile'>
             <h3 className='profile__title'>Привет, {currentUser.name}!</h3>
             <form className='profile__form' onSubmit={handleSubmit} noValidate>

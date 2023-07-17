@@ -6,7 +6,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import { filterMovies, filterDuration } from '../../utils/utils';
 
-const SavedMovies = ({ loggedIn, savedMovies, onCardDelete }) => {
+const SavedMovies = ({ isLoggedIn, savedMovies, onCardDelete }) => {
     const [filteredMovies, setFilteredMovies] = useState(savedMovies); //отфильтрованные по запросу и чекбоксу
     const [isShortMovies, setIsShortMovies] = useState(false); //включен ли чекбокс короткометражек
     const [isNotFound, setIsNotFound] = useState(false); //фильмы по запросу не найдены
@@ -35,7 +35,7 @@ const SavedMovies = ({ loggedIn, savedMovies, onCardDelete }) => {
 
     return(
         <section className='movies'>
-            <Header loggedIn={loggedIn}/>
+            <Header isLoggedIn={isLoggedIn}/>
             <SearchForm onSearchMovies={onSearchMovies} onFilter={handleShortMovies}/>
             <MoviesCardList
                 isNotFound={isNotFound}
