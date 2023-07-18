@@ -88,9 +88,9 @@ export const postCard = (data) => {
             duration: data.duration,
             year: data.year,
             description: data.description,
-            image: 'https://api.nomoreparties.co' + data.image.url,
+            image: `https://api.nomoreparties.co${data.image.url}`,
             trailerLink: data.trailerLink,
-            thumbnail: 'https://api.nomoreparties.co' + data.image.formats.thumbnail.url,
+            thumbnail: `https://api.nomoreparties.co${data.image.formats.thumbnail.url}`, /*'https://api.nomoreparties.co' + data.image.formats.thumbnail.url,*/
             movieId: data.id,
             nameRU: data.nameRU || data.nameEN,
             nameEN: data.nameEN || data.nameRU,

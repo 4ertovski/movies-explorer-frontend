@@ -24,7 +24,7 @@ function App() {
     const [isSuccess, setIsSuccess] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
     const [isUpdate, setIsUpdate] = useState(false);
-    const [cards, setCards] = useState([]); //TODO setCards
+   /* const [cards, setCards] = useState([]);*/
     const path = location.pathname;
 
     //AUTHORIZE IF TOKEN PRESENT
@@ -208,7 +208,7 @@ function App() {
                                 onCardDelete={handleCardDelete}
                                 handleLikeClick={handleCardLike}
                                 savedMovies={savedMovies}
-                                movies={cards}/>
+                                />
                         }/>
                         <Route path='/saved-movies' element={
                             <ProtectedRoute
