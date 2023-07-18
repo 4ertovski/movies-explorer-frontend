@@ -1,4 +1,4 @@
 # movies-explorer-frontend
 
 * макет дипломной работы Яндекс.Практикум: https://disk.yandex.ru/d/vVPAADZAtY9QHA
-* https://github.com/4ertovski/movies-explorer-frontend/pull/1
+* пул-реквест https://github.com/4ertovski/movies-explorer-frontend/pull/1
