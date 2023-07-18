@@ -20,6 +20,7 @@ const Login =  ({ onAuthorize, isLoading, isLoggedIn }) => {
         if (isLoggedIn) {
             navigate('/movies');
         }
+        // eslint-disable-next-line
     }, [isLoggedIn]);
 
     return(

@@ -15,7 +15,7 @@ const MoviesCard = ({card, isSavedFilms, handleLikeClick, onCardDelete, saved, s
         onCardDelete(card);
     }
 
-    const cardSaveButtonClassName = `${ card.saved ? 'card__save-button card__save-button_active' : 'card__save-button'}`;
+    const cardSaveButtonClassName = `${ saved ? 'card__save-button card__save-button_active' : 'card__save-button'}`;
 
     return (
         <li className='card'>
