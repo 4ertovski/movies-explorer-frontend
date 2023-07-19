@@ -5,3 +5,5 @@
 * frontend https://shmovies.nomoredomains.rocks/
 * backend https://api.shmovies.nomoredomains.rocks/
 * репо backend: https://github.com/4ertovski/movies-explorer-api
+* репо level-2 https://github.com/4ertovski/movies-explorer-frontend_level-2/tree/main
+  
