@@ -75,7 +75,7 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
                     <span className="profile__input-error">{errors.email}</span>
                 </label>
                 <button type='submit'
-                        disabled={!isFormValid}
+                        disabled={!isFormValid || isLoading || isLastValues}
                         className={!isFormValid || isLoading || isLastValues
                             ?'profile__button-submit profile__button-submit_inactive'
                             :'profile__button-submit' }
