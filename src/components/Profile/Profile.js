@@ -16,10 +16,6 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
         }
     }, [currentUser, resetForm]);
 
-   /* useEffect(() => {
-        currentUser ? resetForm(currentUser) : resetForm();
-    }, [currentUser, resetForm]);*/
-
     function handleSubmit(e) {
         e.preventDefault();
         onUpdateUser({
@@ -57,9 +53,8 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
                         value={enteredValues.name || ''}
                         pattern={USERNAME_REGEX}
                     />
-                    <span className="profile__input-error">{errors.name}</span>
                 </label>
-
+                <span className="profile__input-error">{errors.name}</span>
                 <div className='profile__border'></div>
                 <label className='profile__field'>
                     E-mail
@@ -72,8 +67,8 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
                            pattern={EMAIL_REGEX}
                            value={enteredValues.email || ''}
                     />
-                    <span className="profile__input-error">{errors.email}</span>
                 </label>
+                <span className="profile__input-error">{errors.email}</span>
                 <button type='submit'
                         disabled={!isFormValid || isLoading || isLastValues}
                         className={!isFormValid || isLoading || isLastValues
