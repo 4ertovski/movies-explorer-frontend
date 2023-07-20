@@ -18,13 +18,13 @@ const Form = ({
                 <img src={logo} alt={'Логотип проекта'}/>
             </Link>
             <h3 className='form__title'>{title}</h3>
-            <form className='form' onSubmit={onSubmit} noValidate>
+            <form className='form'  onSubmit={onSubmit} noValidate>
                 {children}
                 <button type='submit'
                         disabled={!!isDisabled}
                         className={
                     isDisabled || isLoading
-                    ? 'form__button-submit_disable'
+                    ? 'form__button-submit form__button-submit_disable'
                     : 'form__button-submit'}>
                     {buttonText}
                 </button>
@@ -41,5 +41,4 @@ const Form = ({
 
 export default Form
 
-// JS IS DONE
-// TODO CSS: FORM_BUTTON DISABLE&LOADING
+// DONE

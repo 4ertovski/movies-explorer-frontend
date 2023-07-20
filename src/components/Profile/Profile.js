@@ -16,6 +16,10 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
         }
     }, [currentUser, resetForm]);
 
+   /* useEffect(() => {
+        currentUser ? resetForm(currentUser) : resetForm();
+    }, [currentUser, resetForm]);*/
+
     function handleSubmit(e) {
         e.preventDefault();
         onUpdateUser({
@@ -73,8 +77,8 @@ const Profile = ({ signOut, onUpdateUser, isLoggedIn, isLoading }) =>{
                 <button type='submit'
                         disabled={!isFormValid}
                         className={!isFormValid || isLoading || isLastValues
-                            ? 'profile__button-submit'
-                            :'profile__button-submit profile__button-submit_inactive' }
+                            ?'profile__button-submit profile__button-submit_inactive'
+                            :'profile__button-submit' }
                 >
                     Редактировать
                 </button>
