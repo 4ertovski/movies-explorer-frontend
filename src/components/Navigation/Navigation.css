@@ -1,0 +1,98 @@
+.navigation{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .navigation{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.3);
+        z-index: 50;
+        justify-content: space-between;
+    }
+
+    .navigation__container-empty{
+        flex: 1 1 auto;
+    }
+
+    .navigation__container{
+        box-sizing: border-box;
+        padding: 159px 90px 90px 90px;
+        width: 520px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+    }
+
+    .navigation__close-button{
+        position: absolute;
+        top:22px;
+        right: 22px;
+        width: 22px;
+        height: 22px;
+        border:none;
+        background-image: url("../../images/close-button.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    .navigation__close-button:hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    .navigation__navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .navigation__link{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        width: max-content;
+        border-bottom: 2px solid transparent;
+    }
+
+    .navigation__link:hover{
+        border-bottom: 2px solid black;
+    }
+
+    .navigation__account-button:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+/*TODO checkup*/
+.navigation__link_active {
+    color: #2be080;
+}
+
+@media screen and (max-width: 576px) {
+    .navigation__container{
+        padding: 144px 10px 46px 10px;
+        width: 100%;
+    }
+
+    .navigation__container-empty{
+        display: none;
+    }
+
+    .navigation__navbar{
+        gap: 15px;
+    }
+}

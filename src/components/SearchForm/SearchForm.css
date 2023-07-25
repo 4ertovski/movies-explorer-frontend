@@ -1,0 +1,88 @@
+.search{
+    /*padding: 64px 70px 48px;*/
+    padding: 78px 88px 55px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 9px;
+    margin-bottom: 29px;
+    border-bottom: 1px solid #e8e8e8;
+}
+/*TODO проверить в верстке*/
+.search__form-error {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #2be080;
+}
+
+.search__button{
+    width: 34px;
+    height: 34px;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    margin-right: 7px;
+    background-image: url("../../images/find.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.search__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.search__input{
+    min-height: 34px;
+    margin-left: 22px;
+    /*margin-top: 15px;*/
+    /*margin-bottom: 15px;*/
+    width: calc(100% - 68px);
+    text-align: left;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    border: none;
+}
+
+.search__bar{
+    width: 100%;
+    border: 1.5px solid rgba(0,0,0,0.2);
+    border-radius: 50px;
+    outline: none;
+    min-height: 34px;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+}
+
+@media screen and (max-width: 800px) {
+    .search__form{
+        flex-flow: wrap;
+    }
+
+    .search__bar{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search{
+        padding: 60px 10px 0 10px;
+    }
+}

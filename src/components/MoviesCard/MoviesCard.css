@@ -1,0 +1,121 @@
+.card{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #F9F9F9;
+    max-height: 281px;
+    overflow: hidden;
+    flex-direction: row-reverse;
+}
+
+.card__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22px 0 0 22px;
+    flex-grow:1;
+}
+
+.card__info{
+    margin-top: 10px;
+    padding-right: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    color: #a0a0a0;
+    align-items: flex-start;
+    flex-direction: column
+}
+
+.card__text{
+    color: #000;
+    font-size: 18px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.card__length{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #a0a0a0;
+}
+
+.card__save-button{
+    background: #F9F9F9;
+    cursor: pointer;
+    border: none;
+    background-image: url("../../images/like-inactive.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 15px;
+}
+
+.card__save-button_active{
+    background-image: url("../../images/like_active.svg");
+}
+
+.card__remove-button{
+    background-image: url("../../images/remove-button.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.card__image{
+    padding: 6px;
+    width: 364px;
+    height: 100%;
+    object-fit: cover;
+    /*aspect-ratio: 1/1;*/
+}
+
+@media screen and (max-width: 576px) {
+    .card{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        background-color: #F9F9F9;
+
+    }
+
+    .card__text{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .card__container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card__save-button{
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    .card__remove-button{
+        margin-bottom: 0;
+        margin-right: 16px;
+    }
+
+    .card__length{
+        margin-bottom: 14px;
+    }
+}
